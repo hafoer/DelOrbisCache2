@@ -17,3 +17,6 @@
 
 
 - Evtl. die Ordnernamen "C:\orbis32" und "D:\orbis32" fest im Programm in Konstanten hinterlegen, damit nicht aus einem Fehler heruaus wichige Ordner auf einer Workstation oder einem Server gelöscht werden.
+
+- Statusfeld (Label) integrieren.
+

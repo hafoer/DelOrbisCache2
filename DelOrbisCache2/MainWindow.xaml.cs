@@ -1,7 +1,7 @@
 ﻿/*********************************************
  *  Author:       		Herbert Peter
  *  Erstelldatum:       25.10.2020
- *  Letzte Änderung:	28.12.2020
+ *  Letzte Änderung:	31.12.2020
  *
  *  - FunKtion: ORBIS Cache löschen
  *	- Die aktuellen und letzten ORBIS Cache-Ordner der verschiedenen Datenbanken werden von hier ausgelesen: "\\cts.mbh\dfs\Repository\log\hp\DelOrbisCache2.ini"
@@ -58,7 +58,7 @@ namespace DelOrbisCache2
     public partial class MainWindow : Window
     {
         // Konstante für Programminfos
-        public const string strProgInfo = "ORBIS-Cacheordner auf Terminalserver und lokalen PCs suchen, prüfen, löschen.\n\nStand: 28.12.2020, HP";
+        public const string strProgInfo = "ORBIS-Cacheordner auf Terminalserver und lokalen PCs suchen, prüfen, löschen.\n\nStand: 31.12.2020, HP";
         public MainWindow()
         {
             InitializeComponent();

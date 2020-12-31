@@ -1,0 +1,19 @@
+- Aufruf mit Parameter "Auto":
+	- Das Programm liest die Ordnernamen aus der INI-Datei ein und löscht auf den Terminalservern oder Workstations alle anderen Cache-Ordner.
+
+- Aufruf ohne Parameter:
+	- Jetzt wird das Programm mit der GUI aufgerufen. In der GUI können folgende Parameter eingestellt werden.
+	- Feld: Aktueller Ordner KHV
+	- Feld: Letzter Ordner KHV (ist nach dem Update meistens noch von vielen Anwendern in Benutzung)
+	- Feld: Aktueller Ordner EDU
+	- Feld: Aktueller Ordner TEST
+	- Feld: Aktueller Ordner BAK
+	- Die Ordnernamen werden in einer INI-Datei abgespeichert.
+	- Die INI-Datei wird zentral z. B. auf dem Repository abgelegt.
+	- Button "Jetzt ausführen..."
+	- Button "OK"
+	- Button "Abbrechen"
+
+
+
+- Evtl. die Ordnernamen "C:\orbis32" und "D:\orbis32" fest im Programm in Konstanten hinterlegen, damit nicht aus einem Fehler heruaus wichige Ordner auf einer Workstation oder einem Server gelöscht werden.

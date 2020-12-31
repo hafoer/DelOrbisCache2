@@ -1,2 +1,2 @@
 # DelOrbisCache2
-Autmatische löschen von nicht mehr benötigten ORBIS Cache-Ordnern
+Autmatisches Löschen von nicht mehr benötigten ORBIS Cache-Ordnern.

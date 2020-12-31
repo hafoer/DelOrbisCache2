@@ -70,6 +70,9 @@ namespace DelOrbisCache2
             CmdBeenden.ToolTip = "Programm beenden...";
             CmdSpeichern.ToolTip = "Daten in Ini-Datei speichern und anschließend das Programm beenden...";
 
+            //Aktueller Status anzeigen
+            TxtStatus.Text = "Status: Warten...";
+
             // INI-Datei öffnen
             //var MyIni = new IniFile("DelOrbisCache2.ini");
             var MyIni = new IniFile(@"F:\Sicherung\Entwicklung\VS2019\DelOrbisCache2\DelOrbisCache2.ini");

@@ -1,7 +1,7 @@
 ﻿/*********************************************
  *  Author:       		Herbert Peter
  *  Erstelldatum:       25.10.2020
- *  Letzte Änderung:	31.12.2020
+ *  Letzte Änderung:	03.01.2021
  *
  *  - FunKtion: ORBIS Cache löschen
  *	- Die aktuellen und letzten ORBIS Cache-Ordner der verschiedenen Datenbanken werden von hier ausgelesen: "\\cts.mbh\dfs\Repository\log\hp\DelOrbisCache2.ini"
@@ -58,7 +58,7 @@ namespace DelOrbisCache2
     public partial class MainWindow : Window
     {
         // Konstante für Programminfos
-        public const string strProgInfo = "ORBIS-Cacheordner auf Terminalserver und lokalen PCs suchen, prüfen, löschen.\n\nStand: 31.12.2020, HP";
+        public const string strProgInfo = "ORBIS-Cacheordner auf Terminalserver und lokalen PCs suchen, prüfen, löschen.\n\nStand: 03.01.2021, HP";
         public MainWindow()
         {
             InitializeComponent();
@@ -71,7 +71,11 @@ namespace DelOrbisCache2
             CmdSpeichern.ToolTip = "Daten in Ini-Datei speichern und anschließend das Programm beenden...";
 
             //Aktueller Status anzeigen
-            TxtStatus.Text = "Status: Warten...";
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: Warten...";
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: 2 Warten...";
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: 3 Warten...";
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: 4 Warten...";
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: 5 Warten...";
 
             // INI-Datei öffnen
             //var MyIni = new IniFile("DelOrbisCache2.ini");
@@ -99,6 +103,8 @@ namespace DelOrbisCache2
             //Die Ausführen-Schaltfläche wurde angeklickt
             //Mauszeiger als Sanduhr anzeigen
             this.Cursor = Cursors.Wait;
+            //Aktueller Status anzeigen
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: Ordner überprüfen...";
             //string[] dirs = Directory.GetDirectories(@"F:\Sicherung\Entwicklung\VS2019\DelOrbisCache2\ORBIS-Cache", "*", SearchOption.TopDirectoryOnly);
             string[] dirs;
             //Existiert der Ordner für eine lokale ORBIS-Installation?
@@ -113,10 +119,14 @@ namespace DelOrbisCache2
                     //MessageBox.Show("Auf diesem PC / Server gibt es keine ORBIS Cache-Ordner. \nFunktion wird beendet.", "Fertig");
                     //Mauszeiger wieder auf standard setzen
                     this.Cursor = Cursors.Arrow;
+                    //Aktueller Status anzeigen
+                    TxtStatus.Text = TxtStatus.Text + "\nStatus: Warten...";
                     return;
                 }
                 else
                 {
+                    //Aktueller Status anzeigen
+                    TxtStatus.Text = TxtStatus.Text + "\nStatus: Ordner von Terminalserver einlesen...";
                     strInstallation = TxtOrdnerTS.Text;
                     //Ordner der TS-Installation einlesen.
                     dirs = Directory.GetDirectories(TxtOrdnerTS.Text, "*", SearchOption.TopDirectoryOnly);
@@ -124,6 +134,8 @@ namespace DelOrbisCache2
             }
             else
             {
+                //Aktueller Status anzeigen
+                TxtStatus.Text = TxtStatus.Text + "\nStatus: Lokale Ordner einlesen...";
                 //Der ORBIS Cache-Ordner für eine lokale Installation existiert.
                 strInstallation = TxtOrdnerLokal.Text;
                 //Ordner des lokalen Cache-Ordner einlesen.
@@ -134,6 +146,8 @@ namespace DelOrbisCache2
             foreach (string dir in dirs)
             {
                 //Console.WriteLine(dir);
+                //Aktueller Status anzeigen
+                TxtStatus.Text = "\nStatus: Ordner prüfen...";
                 int lastpos = dir.LastIndexOf("\\");
                 var strSuche = dir.Substring(lastpos + 1);
                 if (strSuche == TxtKHVNeu.Text || strSuche == TxtKHVLetzter.Text || strSuche == TxtEDU.Text || strSuche == TxtTEST.Text || strSuche == TxtBAK.Text)
@@ -145,6 +159,8 @@ namespace DelOrbisCache2
                 {
                     //Dieser Ordner darf gelöscht werden.
                     //Console.WriteLine("Überflüssiger Ordner <" + strSuche + "> wird gelöscht.");
+                    //Aktueller Status anzeigen
+                    TxtStatus.Text = TxtStatus.Text + "\nStatus: Ordner löschen...";
                     //Ordner löschen
                     try
                     {
@@ -182,6 +198,8 @@ namespace DelOrbisCache2
             //Thread.Sleep(5000);
             //Console.WriteLine("Fertig! Es wurden " + iAnz + " Ordner gelöscht.");
             //MessageBox.Show("Es wurden " + iAnz + " Ordner gelöscht.", "Fertig");
+            //Aktueller Status anzeigen
+            TxtStatus.Text = TxtStatus.Text + "\nStatus: Warten...";
             //Mauszeiger wieder auf standard setzen
             this.Cursor = Cursors.Arrow;
         }

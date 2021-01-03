@@ -44,7 +44,7 @@
 				</TransformGroup>
 			</Image.RenderTransform>
 		</Image>
-		<TextBlock x:Name="TxtStatus" HorizontalAlignment="Left" Margin="10,367,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="489" Height="45" Background="#FFB2D6AA" Padding="2" OpacityMask="Black"/>
+		<TextBlock x:Name="TxtStatus" HorizontalAlignment="Left" Margin="10,367,0,0" TextWrapping="Wrap" Text="Das ist die erste Zeile." VerticalAlignment="Top" Width="489" Height="45" Background="#FFB2D6AA" Padding="2" OpacityMask="Black" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" UseLayoutRounding="True" Cursor="Arrow" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
 
-	</Grid>
+    </Grid>
 </Window>

@@ -5,46 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DelOrbisCache2"
         mc:Ignorable="d"
-        Title="DelOrbisCache" Height="485" Width="525" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-	<Grid Background="#FF7CB87C">
+        Title="DelOrbisCache" Height="512.334" Width="525" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#FF7CB87C">
 
-		<Button x:Name="CmdBeenden" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="352,420,0,0" Click="CmdBeenden_Click"/>
-		<Button x:Name="CmdAusfuehren" Content="Jetzt ausführen..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="184,420,0,0" Click="CmdAusfuehren_Click"/>
-		<Button x:Name="CmdSpeichern" Content="Speichern und Schließen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10,420,0,0" Click="CmdSpeichern_Click"/>
-		<GroupBox Header="Namen der ORBIS-Cacheordner" HorizontalAlignment="Left" Height="215" Margin="10,14,0,0" VerticalAlignment="Top" Width="457" Background="#FFB4CBAB" Foreground="Black">
-			<StackPanel>
-				<TextBlock>KHV: Neuer Ordnername</TextBlock>
-				<TextBox x:Name="TxtKHVNeu" />
-				<TextBlock>KHV: Letzter Ordnername</TextBlock>
-				<TextBox x:Name="TxtKHVLetzter" />
-				<TextBlock>EDU: Aktueller Ordnername</TextBlock>
-				<TextBox x:Name="TxtEDU" />
-				<TextBlock>TEST: Aktueller Ordnername</TextBlock>
-				<TextBox x:Name="TxtTEST" />
-				<TextBlock>BAK: Aktueller Ordnername</TextBlock>
-				<TextBox x:Name="TxtBAK" />
-			</StackPanel>
-		</GroupBox>
-		<GroupBox Header="Pfad lokal und Terminalserver" HorizontalAlignment="Left" Height="105" Margin="10,245,0,0" VerticalAlignment="Top" Width="487" Background="#FFB4CBAB" Foreground="Black">
-			<StackPanel>
-				<TextBlock>Pfad für lokale ORBIS-Installationen (z. B. PACS-Workstations)</TextBlock>
-				<TextBox x:Name="TxtOrdnerLokal" />
-				<TextBlock>Pfad für Terminalserverinstallationen</TextBlock>
-				<TextBox x:Name="TxtOrdnerTS" />
-			</StackPanel>
-		</GroupBox>
-		<Image x:Name="ImgInfo" HorizontalAlignment="Left" Height="15" Margin="484,4,0,0" VerticalAlignment="Top" Width="15" Source="info2.png" MouseDown="ImgInfo_MouseDown"/>
-		<Image x:Name="ImgPfeil" HorizontalAlignment="Left" Height="28" Margin="464,60,-8,0" VerticalAlignment="Top" Width="63" Source="Pfeil1.jpg" MouseDown="ImgPfeil_MouseDown" RenderTransformOrigin="0.692,0.444">
-			<Image.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="90"/>
-					<TranslateTransform X="-6.992" Y="9.904"/>
-				</TransformGroup>
-			</Image.RenderTransform>
-		</Image>
-		<TextBlock x:Name="TxtStatus" HorizontalAlignment="Left" Margin="10,367,0,0" TextWrapping="Wrap" Text="Das ist die erste Zeile." VerticalAlignment="Top" Width="489" Height="45" Background="#FFB2D6AA" Padding="2" OpacityMask="Black" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" UseLayoutRounding="True" Cursor="Arrow" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
-
+        <Button x:Name="CmdBeenden" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="352,440,0,0" Click="CmdBeenden_Click"/>
+        <Button x:Name="CmdAusfuehren" Content="Jetzt ausführen..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="184,440,0,0" Click="CmdAusfuehren_Click"/>
+        <Button x:Name="CmdSpeichern" Content="Speichern und Schließen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="10,440,0,0" Click="CmdSpeichern_Click"/>
+        <GroupBox Header="Namen der ORBIS-Cacheordner" HorizontalAlignment="Left" Height="215" Margin="10,14,0,0" VerticalAlignment="Top" Width="457" Background="#FFB4CBAB" Foreground="Black">
+            <StackPanel>
+                <TextBlock>KHV: Neuer Ordnername</TextBlock>
+                <TextBox x:Name="TxtKHVNeu" />
+                <TextBlock>KHV: Letzter Ordnername</TextBlock>
+                <TextBox x:Name="TxtKHVLetzter" />
+                <TextBlock>EDU: Aktueller Ordnername</TextBlock>
+                <TextBox x:Name="TxtEDU" />
+                <TextBlock>TEST: Aktueller Ordnername</TextBlock>
+                <TextBox x:Name="TxtTEST" />
+                <TextBlock>BAK: Aktueller Ordnername</TextBlock>
+                <TextBox x:Name="TxtBAK" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Pfad lokal und Terminalserver" HorizontalAlignment="Left" Height="105" Margin="10,245,0,0" VerticalAlignment="Top" Width="487" Background="#FFB4CBAB" Foreground="Black">
+            <StackPanel>
+                <TextBlock>Pfad für lokale ORBIS-Installationen (z. B. PACS-Workstations)</TextBlock>
+                <TextBox x:Name="TxtOrdnerLokal" />
+                <TextBlock>Pfad für Terminalserverinstallationen</TextBlock>
+                <TextBox x:Name="TxtOrdnerTS" />
+            </StackPanel>
+        </GroupBox>
+        <Image x:Name="ImgInfo" HorizontalAlignment="Left" Height="15" Margin="484,4,0,0" VerticalAlignment="Top" Width="15" Source="info2.png" MouseDown="ImgInfo_MouseDown"/>
+        <Image x:Name="ImgPfeil" HorizontalAlignment="Left" Height="28" Margin="464,60,-8,0" VerticalAlignment="Top" Width="63" Source="Pfeil1.jpg" MouseDown="ImgPfeil_MouseDown" RenderTransformOrigin="0.692,0.444">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform X="-6.992" Y="9.904"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="Status:" Margin="7,355,450,80" />
+        <TextBox x:Name="TxtBoxStatus" HorizontalAlignment="Left" Height="55" Margin="10,375,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="487" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" IsReadOnly="True" BorderThickness="2"/>
     </Grid>
 </Window>

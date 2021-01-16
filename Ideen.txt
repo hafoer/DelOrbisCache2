@@ -1,5 +1,5 @@
 - Aufruf mit Parameter "Auto":
-	- Das Programm liest die Ordnernamen aus der INI-Datei ein und löscht auf den Terminalservern oder Workstations alle anderen Cache-Ordner.
+	- Das Programm liest die Ordnernamen aus der INI-Datei ein und löscht auf den Terminalservern oder Workstations alle anderen Cache-Ordner. Die GUI wird nicht angezeigt und das Programm wird nach dem Löschvorgang automatisch beendet.
 
 - Aufruf ohne Parameter:
 	- Jetzt wird das Programm mit der GUI aufgerufen. In der GUI können folgende Parameter eingestellt werden.
@@ -14,9 +14,7 @@
 	- Button "OK"
 	- Button "Abbrechen"
 
-
-
 - Evtl. die Ordnernamen "C:\orbis32" und "D:\orbis32" fest im Programm in Konstanten hinterlegen, damit nicht aus einem Fehler heruaus wichige Ordner auf einer Workstation oder einem Server gelöscht werden.
 
-- Statusfeld (Label) integrieren.
-
+- Fehlerbehandlung:
+	- Fehler beim Löschen von Ordnern überwachen, Errorlevel auswerten und entsprechend reagieren.
